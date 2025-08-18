@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %> | TimeCraft</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Pacifico&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/user-css/style.css">
+
+  <!-- Page-specific CSS -->
+  <% if (typeof customCss !== "undefined") { %>
+    <link rel="stylesheet" href="/css/<%= customCss %>.css">
+  <% } %>
+
+</head>
+<body>
+  
+<header class="site-header">
+  <div class="header-container">
+
+    <!-- Desktop Navigation -->
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/shop">Shop</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/about">About Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hamburger (only for mobile) -->
+    <nav role="navigation" class="hamburger-nav">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/shop">Shop</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+          <li><a href="/about">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Centered Logo -->
+    <div class="logo">
+      <a href="/">TimeCraft</a>
+    </div>
+    <!-- Icons on the right -->
+    <div class="header-icons">
+      <a href="#"><span class="material-symbols-outlined">favorite</span></a>
+      <a href="#"><span class="material-symbols-outlined">shopping_cart</span></a>
+      <a href="#"><span class="material-symbols-outlined">person</span></a>
+    </div>
+
+  </div>
+</header>
+
+  <!-- Main -->
+  <main>
+    <div class="container">
+      <%- body %>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="logo-footer">
+        <a href="/">TimeCraft</a>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h4>Shop</h4>
+          <a href="#">Men</a><br>
+          <a href="#">Women</a><br>
+          <a href="#">Accessories</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="#">About Us</a><br>
+          <a href="#">Careers</a><br>
+          <a href="#">Press</a>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <a href="#">Help Center</a><br>
+          <a href="#">Returns</a><br>
+          <a href="#">Shipping</a>
+        </div>
+        <div>
+          <h4>Follow Us</h4>
+          <a href="#">Instagram</a><br>
+          <a href="#">Twitter</a><br>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+
+      <p class="footer-copy">© 2025 TimeCraft. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

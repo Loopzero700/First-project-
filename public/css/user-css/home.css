@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+
+h1, h2 {
+  text-align: left;
+  margin: 20px 0;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: space-between;
+  padding: 50px;
+  background-image: url("/images/user/landing-page-img.jpg");
+  background-size: cover;
+}
+
+.hero-content { max-width: 50%;}
+.hero-content h1 { font-size: 2.5rem; color: aliceblue;}
+.hero-content p { margin: 15px 0; color: aliceblue;}
+.btn-primary {
+  padding: 10px 20px;
+  border: none;
+  background: rgb(255, 255, 255);
+  color: rgb(102, 102, 102);
+  cursor: pointer;
+  border-radius: 5px;
+}
+.hero-image img { max-width: 100%; height: auto; }
+
+/* Product Section */
+.products {
+  padding: 40px 20px;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+.product img { width: 100%; border-radius: 8px; }
+.product p { text-align: center; margin-top: 10px; }
+
+/* Categories */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.category img { width: 100%; border-radius: 8px; }
+.category p { text-align: center; margin-top: 10px; }
+
+/* Hand Picked */
+.hand-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+.hand-grid img { width: 250px; border-radius: 10px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero { flex-direction: column; text-align: center; }
+  .hero-content { max-width: 100%; }
+}
