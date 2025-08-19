@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TimeCraft - Admin Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/admin-css/admin-layout.css">
+
+  <% if (typeof customCss !== "undefined") { %>
+    <link rel="stylesheet" href="/css/<%= customCss %>.css">
+  <% } %>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="layout">
+    <nav class="sidebar" id="sidebar">
+      <ul>
+        <li class="active"><i class="fas fa-tachometer-alt"></i><span> Dashboard</span></li>
+        <li><i class="fas fa-boxes"></i><span> Products</span></li>
+        <li><i class="fas fa-users"></i><span> Customers</span></li>
+        <li><i class="fas fa-shopping-cart"></i><span> Orders</span></li>
+        <li><i class="fas fa-tags"></i><span> Coupons</span></li>
+        <li><i class="fas fa-sitemap"></i><span> Category</span></li>
+        <li><i class="fas fa-gift"></i><span> Offers</span></li>
+        <li><i class="fas fa-image"></i><span> Banner</span></li>
+        <li><i class="fas fa-chart-bar"></i><span> Sales Report</span></li>
+        <li><i class="fas fa-sign-out-alt"></i><span> Logout</span></li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+        <h1 class="logo">TimeCraft</h1>
+         <%- body %>
+    </main>
+  </div>
+
+  <script>
+    // Hamburger toggle
+    const hamburger = document.getElementById("hamburger");
+    const sidebar = document.getElementById("sidebar");
+    hamburger.addEventListener("click", () => {
+      sidebar.classList.toggle("show");
+      hamburger.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
