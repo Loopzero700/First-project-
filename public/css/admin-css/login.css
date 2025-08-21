@@ -72,7 +72,7 @@ body {
   text-align: center;
   width: 480px;
   backdrop-filter: blur(10px);
-  animation: slideUp 0.8s ease-out;
+  animation: slideUp 1s ease-out;
   margin-top: 80px; /* To account for fixed header */
   opacity: 90%;
 }
